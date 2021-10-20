@@ -3,7 +3,7 @@ import java.io.Serializable;
 //import java.util.List;
 
 import javax.persistence.*;
-//import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name="computer")
@@ -18,10 +18,10 @@ public class Computer implements Serializable {
     private Integer year;
 
 //RELACION ENTRE COMPUTER Y CATEGORY
- /*    @ManyToOne
+    @ManyToOne
     @JoinColumn(name="Categoryid")
     @JsonIgnoreProperties("computer")
-    private Category category; */
+    private Category category; 
    
 //RELACION ENTRE COMPUTER Y MESSAGE
    /*  @OneToMany(cascade={CascadeType.PERSIST}, mappedBy = "computer")
