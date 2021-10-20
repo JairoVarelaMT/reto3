@@ -20,7 +20,7 @@ public class Computer implements Serializable {
 //RELACION ENTRE COMPUTER Y CATEGORY
     @ManyToOne
     @JoinColumn(name="Categoryid")
-    @JsonIgnoreProperties("computer")
+    @JsonIgnoreProperties("computers")
     private Category category; 
    
 //RELACION ENTRE COMPUTER Y MESSAGE
