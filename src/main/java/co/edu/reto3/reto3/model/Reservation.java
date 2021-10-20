@@ -3,7 +3,7 @@ import java.util.Date;
 
 import javax.persistence.*;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+//import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 
 @Entity
@@ -17,8 +17,8 @@ public class Reservation {
     private Date devolutionDate;
     
     // RELACION ENTRE COMPUTER Y RESERVATION
-    @ManyToOne
-    @JoinColumn(name="idComputer")//idComputer
+   /*  @ManyToOne
+    @JoinColumn(name="id")//idComputer
     @JsonIgnoreProperties("reservation")
     private Computer computer;
 
@@ -27,7 +27,7 @@ public class Reservation {
     @JoinColumn(name="idClient")
     @JsonIgnoreProperties("reservation")
     private Client client;
-
+ */
 //GETTERS AND SETTERS
     public Integer getIdReservation() {
         return idReservation;

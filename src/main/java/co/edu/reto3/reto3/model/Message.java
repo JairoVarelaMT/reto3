@@ -3,7 +3,7 @@ import java.io.Serializable;
 
 import javax.persistence.*;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+//import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name="message")
@@ -15,8 +15,8 @@ public class Message implements Serializable {
     private String messageText;
 
 // RELACION ENTRE COMPUTER Y MESSAGE
-    @ManyToOne
-    @JoinColumn(name="idComputer")//idComputer
+  /*   @ManyToOne
+    @JoinColumn(name="id")//idComputer
     @JsonIgnoreProperties("message")
     private Computer computer;
 
@@ -25,7 +25,7 @@ public class Message implements Serializable {
     @JoinColumn(name="idClient")
     @JsonIgnoreProperties("message")
     private Client client;
-
+ */
 //GETTERS AND SETTERS
     public Integer getIdMessage() {
         return idMessage;

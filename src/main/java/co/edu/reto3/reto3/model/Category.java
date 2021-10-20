@@ -1,9 +1,9 @@
 package co.edu.reto3.reto3.model;
 
 import java.io.Serializable;
-import java.util.List;
+//import java.util.List;
 import javax.persistence.*;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+//import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name="category")
@@ -16,10 +16,10 @@ public class Category implements Serializable {
     private String description;
 
 //RELACION ENTRE TABLAS 
-    @OneToMany(cascade={CascadeType.PERSIST}, mappedBy = "category")
-    @JsonIgnoreProperties("category")
-    private List<Computer> computer;
-
+   /*  @ManyToOne
+    @JoinColumn(name="idComputer")
+    @JsonIgnoreProperties("computer")
+    private Category category; */
 //GETTER AND SETTERS
     public Integer getId() {
         return id;

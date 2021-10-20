@@ -1,6 +1,6 @@
 package co.edu.reto3.reto3.model;
 import java.io.Serializable;
-import java.util.List;
+//import java.util.List;
 
 import javax.persistence.*;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -11,7 +11,7 @@ public class Computer implements Serializable {
 //campo llave primaria
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idComputer;
+    private Integer id;
     private String name;
     private String brand;
     private String description;
@@ -19,9 +19,12 @@ public class Computer implements Serializable {
 
 //RELACION ENTRE COMPUTER Y CATEGORY
     @ManyToOne
-    @JoinColumn(name="idCategory")
+    @JoinColumn(name="Categoryid")
     @JsonIgnoreProperties("computer")
     private Category category;
+  /*   @OneToMany(cascade={CascadeType.PERSIST}, mappedBy = "computer")
+    @JsonIgnoreProperties("computer")
+    private List<Category> category;
 
 //RELACION ENTRE COMPUTER Y MESSAGE
     @OneToMany(cascade={CascadeType.PERSIST}, mappedBy = "computer")
@@ -32,13 +35,13 @@ public class Computer implements Serializable {
     @OneToMany(cascade={CascadeType.PERSIST}, mappedBy = "computer")
     @JsonIgnoreProperties("computer")
     private List<Reservation> reservation;
-
+ */
 //GETTER AND SETTERS
     public Integer getIdComputer() {
-        return idComputer;
+        return id;
     }
     public void setId(Integer id) {
-        this.idComputer = id;
+        this.id = id;
     }
     public String getName() {
         return name;

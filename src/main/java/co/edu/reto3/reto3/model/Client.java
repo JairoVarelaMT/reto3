@@ -1,10 +1,10 @@
 package co.edu.reto3.reto3.model;
 import java.io.Serializable;
-import java.util.List;
+//import java.util.List;
 
 import javax.persistence.*;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+//import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name="client")
@@ -18,9 +18,9 @@ public class Client implements Serializable {
     private String password;
     private Integer age;
 //
-    @OneToMany(cascade={CascadeType.PERSIST}, mappedBy = "client")
+   /*  @OneToMany(cascade={CascadeType.PERSIST}, mappedBy = "client")
     @JsonIgnoreProperties("client")
-    private List<Message> message;
+    private List<Message> message; */
 //GETTERS AND SETTERS
     public Integer getIdClient() {
         return idClient;
