@@ -3,7 +3,7 @@ import java.io.Serializable;
 //import java.util.List;
 
 import javax.persistence.*;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+//import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name="computer")
@@ -18,24 +18,21 @@ public class Computer implements Serializable {
     private Integer year;
 
 //RELACION ENTRE COMPUTER Y CATEGORY
-    @ManyToOne
+ /*    @ManyToOne
     @JoinColumn(name="Categoryid")
     @JsonIgnoreProperties("computer")
-    private Category category;
-  /*   @OneToMany(cascade={CascadeType.PERSIST}, mappedBy = "computer")
-    @JsonIgnoreProperties("computer")
-    private List<Category> category;
-
+    private Category category; */
+   
 //RELACION ENTRE COMPUTER Y MESSAGE
-    @OneToMany(cascade={CascadeType.PERSIST}, mappedBy = "computer")
+   /*  @OneToMany(cascade={CascadeType.PERSIST}, mappedBy = "computer")
     @JsonIgnoreProperties("computer")
     private List<Message> message;
     
 //RELACION ENTRE COMPUTER Y RESERVATION
     @OneToMany(cascade={CascadeType.PERSIST}, mappedBy = "computer")
     @JsonIgnoreProperties("computer")
-    private List<Reservation> reservation;
- */
+    private List<Reservation> reservation; */
+ 
 //GETTER AND SETTERS
     public Integer getIdComputer() {
         return id;
