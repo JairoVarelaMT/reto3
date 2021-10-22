@@ -24,10 +24,10 @@ public class ComputerServicio {
 
     public Computer save(Computer computador){
         //Verificamos si la categoria es nuevo y de ser así se guarda
-        if (computador.getIdComputer()==null) {
+        if (computador.getId()==null) {
             return computerRepositorio.save(computador);            
         }else{ //Si el objeto viene con un Id verificamos si existe o no
-            Optional<Computer> consulta=computerRepositorio.getComputer(computador.getIdComputer());
+            Optional<Computer> consulta=computerRepositorio.getComputer(computador.getId());
             if (consulta.isEmpty()) {
                 return computerRepositorio.save(computador);                
             } else {
