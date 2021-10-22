@@ -24,8 +24,8 @@ public class ComputerControlador {
         return computerServicio.getAll();
     }
 
-    @GetMapping("/{idComputer}")
-    public Optional<Computer> getComputer(@PathVariable("idComputer") int id){
+    @GetMapping("/{id}")
+    public Optional<Computer> getComputer(@PathVariable("id") int id){
         return computerServicio.getComputer(id);
     }
 
