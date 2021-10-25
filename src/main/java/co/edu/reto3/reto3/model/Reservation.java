@@ -15,7 +15,15 @@ public class Reservation {
     private Integer idReservation;
     private Date starDate;
     private Date devolutionDate;
-    
+    private String status="created";
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     // RELACION ENTRE COMPUTER Y RESERVATION
     @ManyToOne
     @JoinColumn(name = "id")
