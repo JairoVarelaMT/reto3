@@ -14,8 +14,9 @@ public class Computer implements Serializable {
     private Integer id;
     private String name;
     private String brand;
-    private String description;
     private Integer year;
+    private String description;
+   
 
 //RELACION ENTRE COMPUTER Y CATEGORY
     @ManyToOne
