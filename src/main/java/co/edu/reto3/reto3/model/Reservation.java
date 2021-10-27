@@ -16,15 +16,9 @@ public class Reservation {
     private Date startDate;
     private Date devolutionDate;
     private String status="created";
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    // RELACION ENTRE COMPUTER Y RESERVATION
+    private String score;
+   
+    // RELACION entre las tablas cliente y computer
     @ManyToOne
     @JoinColumn(name = "id")
     @JsonIgnoreProperties("reservations")
@@ -34,9 +28,8 @@ public class Reservation {
     @JoinColumn(name = "idClient")
     @JsonIgnoreProperties({"reservations","messages"})
     private Client client;
-
-    private String score = "created";
-
+    
+    //metodos getter a setter de la clase.
     public Integer getIdReservation() {
         return idReservation;
     }
@@ -45,12 +38,12 @@ public class Reservation {
         this.idReservation = idReservation;
     }
 
-    public Date getStarDate() {
+    public Date getStartDate() {
         return startDate;
     }
 
-    public void setStarDate(Date starDate) {
-        this.startDate = starDate;
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
     }
 
     public Date getDevolutionDate() {
@@ -59,6 +52,22 @@ public class Reservation {
 
     public void setDevolutionDate(Date devolutionDate) {
         this.devolutionDate = devolutionDate;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getScore() {
+        return score;
+    }
+
+    public void setScore(String score) {
+        this.score = score;
     }
 
     public Computer getComputer() {
@@ -77,13 +86,5 @@ public class Reservation {
         this.client = client;
     }
 
-    public String getScore() {
-        return score;
-    }
-
-    public void setScore(String score) {
-        this.score = score;
-    } 
-//GETTERS AND SETTERS
   
 }
