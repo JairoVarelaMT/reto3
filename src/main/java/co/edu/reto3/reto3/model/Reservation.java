@@ -16,7 +16,7 @@ public class Reservation {
     private Date startDate;
     private Date devolutionDate;
     private String status="created";
-    private String score;
+    
    
     // RELACION entre las tablas cliente y computer
     @ManyToOne
@@ -28,6 +28,8 @@ public class Reservation {
     @JoinColumn(name = "idClient")
     @JsonIgnoreProperties({"reservations","messages"})
     private Client client;
+
+    private String score;
     
     //metodos getter a setter de la clase.
     public Integer getIdReservation() {
